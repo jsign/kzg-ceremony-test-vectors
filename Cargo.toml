@@ -5,6 +5,5 @@ edition = "2021"
 
 [dependencies]
 hex = "0.4.3"
-prefix-hex = "0.5.0"
 serde_json = "1.0.91"
-small-powers-of-tau = { git = "https://github.com/crate-crypto/small-powers-of-tau", rev = "a958dbf" }
+kzg-ceremony-crypto = { git = "https://github.com/ethereum/kzg-ceremony-sequencer", rev = "34b5fc8", features = ["arkworks"] }

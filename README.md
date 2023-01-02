@@ -1,6 +1,6 @@
 # Ethereum KZG Powers of Tau Test Vectors
 
-This repository contains a program that generates a `BatchContribution` from the [initialContribution.json](https://github.com/ethereum/kzg-ceremony-specs/blob/master/initialContribution.json) from the spec. The generation is done using the [reference implementation](https://github.com/crate-crypto/small-powers-of-taureference) ceremony client.
+This repository contains a program that generates a `BatchContribution` from the [initialContribution.json](https://github.com/ethereum/kzg-ceremony-specs/blob/master/initialContribution.json) from the spec. The generation is done using the [reference implementation](https://github.com/ethereum/kzg-ceremony-sequencer) ceremony client.
 
 
 This can help KZG ceremony client implementations to validate that their batch contribution logic is working as expected. This is possible since `f(initialContribution, subCeremonySecrets) -> newBatchContribution` is deterministic.
@@ -23,12 +23,7 @@ Simply run `cargo run`. The `updateContribution.json` file in the repository is 
 
 ```bash
 $ cargo run
-   Compiling kzg-ceremony-test-vectors v0.1.0 (/home/ignacio/code/kzg-ceremony-test-vectors)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.70s
-     Running `target/debug/kzg-ceremony-test-vectors`
 unmarshaling initial contribution file... 
-done.
-parsing initial contribution...
 done.
 fixed secrets for test vector: ["0x111100", "0x221100", "0x331100", "0x441100"]
 updating contribution... 
