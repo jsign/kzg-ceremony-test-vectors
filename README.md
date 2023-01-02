@@ -1,6 +1,6 @@
 # Ethereum KZG Powers of Tau Test Vectors
 
-This repository contains a program that generates a `BatchContribution`` from the [initialContribution.json](https://github.com/ethereum/kzg-ceremony-specs/blob/master/initialContribution.json) from the spec. The generation is done using the [reference implementation](https://github.com/crate-crypto/small-powers-of-taureference) ceremony client.
+This repository contains a program that generates a `BatchContribution` from the [initialContribution.json](https://github.com/ethereum/kzg-ceremony-specs/blob/master/initialContribution.json) from the spec. The generation is done using the [reference implementation](https://github.com/crate-crypto/small-powers-of-taureference) ceremony client.
 
 
 This can help KZG ceremony client implementations to validate that their batch contribution logic is working as expected. This is possible since `f(initialContribution, subCeremonySecrets) -> newBatchContribution` is deterministic.
@@ -36,9 +36,9 @@ done.
 ```
 
 ## Why only one test vector?
-For now, yes, with fixed secrets `[0x111100, 0x221100, 0x331100, 0x441100]`. If the output of your client matches the expected one, that's high signal that your implementation is correct since getting that by chance is impossible.
+Today running the program generates the output for the fixed secrets `[0x111100, 0x221100, 0x331100, 0x441100]` (one for each sub-ceremony). If the output of your client matches the expected output, that's high signal that your implementation is correct since getting that by chance is impossible.
 
-However, we could change the code in this repo to generate `(N * #sub-ceremonies`)` random test vectors and `N`` `updatedContribution.json` outputs.
+However, we could change the code in this repo to generate `(N * #sub-ceremonies`) random test vectors and `N` `updatedContribution.json` outputs.
 
 If you're interested in generating the output for specific secrets, you can easily change that in `main.rs`.
 
