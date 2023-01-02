@@ -1,0 +1,11 @@
+[package]
+name = "kzg-ceremony-test-vectors"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hex = "0.4.3"
+prefix-hex = "0.5.0"
+serde_json = "1.0.91"
+small-powers-of-tau = { git = "https://github.com/crate-crypto/small-powers-of-tau", rev = "a958dbf" }
+#small-powers-of-tau = { path = "../small-powers-of-tau"}
